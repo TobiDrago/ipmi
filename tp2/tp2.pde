@@ -2,7 +2,7 @@
 
 PImage undertale, pacifista, genocida, saladeljuicio, TobyFox;
 int currentSlide = 1;
-int slideDuration = 600; // Duración de cada diapositiva en frames (60 fps)
+int slideDuration = 600; 
 int slideStartFrame;
 float textPosition;
 boolean textCentered = false;
