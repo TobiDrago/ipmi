@@ -1,3 +1,5 @@
+Tobias Merlin Comision 2
+
 PImage undertale, pacifista, genocida, saladeljuicio, TobyFox;
 int currentSlide = 1;
 int slideDuration = 600; // Duración de cada diapositiva en frames (60 fps)
