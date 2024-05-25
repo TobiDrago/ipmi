@@ -1,4 +1,4 @@
-/Tobias Merlin Comision 2
+//Tobias Merlin Comision 2
 
 PImage undertale, pacifista, genocida, saladeljuicio, TobyFox;
 int currentSlide = 1;
