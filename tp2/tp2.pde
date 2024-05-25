@@ -1,4 +1,4 @@
-Tobias Merlin Comision 2
+/Tobias Merlin Comision 2
 
 PImage undertale, pacifista, genocida, saladeljuicio, TobyFox;
 int currentSlide = 1;
@@ -20,7 +20,7 @@ void setup() {
   slideStartFrame = frameCount;
   textPosition = width; 
   
-  // Inicializa el botón de reinicio
+ 
   resetButton = new CircleButton(width / 2, height / 2, 50, "Reiniciar");
 }
 
@@ -39,24 +39,24 @@ void draw() {
     drawSlide5();
   }
 
-  // Control del tiempo de la diapositiva
+  
   if (frameCount - slideStartFrame > slideDuration && currentSlide < 5) {
     currentSlide++;
     slideStartFrame = frameCount;
-    textPosition = width; // Reinicia la posición del texto
+    textPosition = width; 
     textCentered = false;
   }
 
-  // Animar el texto hasta que esté centrado
+  
   if (!textCentered) {
-    textPosition -= 2; // Ajusta la velocidad de movimiento del texto
+    textPosition -= 2; 
     if (textPosition <= (width - textWidth(getCurrentText())) / 2) {
       textCentered = true;
-      textPosition = (width - textWidth(getCurrentText())) / 2; // Asegura que el texto se quede centrado
+      textPosition = (width - textWidth(getCurrentText())) / 2; 
     }
   }
 
-  // Dibuja y actualiza el botón de reinicio si es visible
+  
  if (currentSlide == 5) {
     showResetButton = true;
     resetButton.display();;
@@ -64,18 +64,18 @@ void draw() {
 }
 
 void mousePressed() {
-  // Verifica si se hizo clic en el botón de reinicio
+  
   if (showResetButton && resetButton.isClicked()) {
     currentSlide = 1;
     slideStartFrame = frameCount;
-    textPosition = width; // Reinicia la posición del texto
+    textPosition = width; 
     textCentered = false;
     showResetButton = false; 
   }
 }
 
 void drawSlide1() {
-  image(undertale, 0, 0, 640, 360); // Ajusta la imagen para que se vea completa
+  image(undertale, 0, 0, 640, 360); 
   textSize(16);
   fill(0);
   textAlign(LEFT, TOP);
@@ -83,7 +83,7 @@ void drawSlide1() {
 }
 
 void drawSlide2() {
-  image(pacifista, 0, 0, 640, 360); // Ajusta la imagen para que se vea completa
+  image(pacifista, 0, 0, 640, 360); 
   textSize(14);
   fill(0);
   textAlign(LEFT, TOP);
@@ -91,7 +91,7 @@ void drawSlide2() {
 }
 
 void drawSlide3() {
-  image(genocida, 0, 0, 640, 360); // Ajusta la imagen para que se vea completa
+  image(genocida, 0, 0, 640, 360); 
   textSize(16);
   fill(0);
   textAlign(LEFT, TOP);
@@ -99,7 +99,7 @@ void drawSlide3() {
 }
 
 void drawSlide4() {
-  image(saladeljuicio, 0, 0, 640, 360); // Ajusta la imagen para que se vea completa
+  image(saladeljuicio, 0, 0, 640, 360); 
   textSize(16);
   fill(0);
   textAlign(LEFT, TOP);
@@ -107,7 +107,7 @@ void drawSlide4() {
 }
 
 void drawSlide5() {
-  image(TobyFox, 0, 0, 640, 360); // Ajusta la imagen para que se vea completa
+  image(TobyFox, 0, 0, 640, 360); 
   textSize(16);
   fill(0);
   textAlign(LEFT, TOP);
@@ -130,7 +130,7 @@ return "";
 }
 }
 
-// Clase Button para crear y gestionar el botón de reinicio
+
 class CircleButton {
   float x, y, r;
   String label;
